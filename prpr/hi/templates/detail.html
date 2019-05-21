@@ -1,0 +1,14 @@
+<h1>디테일페이지임</h1>
+
+
+<p>{{blog_name.all}}</p>
+<p>{{ blog_name.title }}</p>
+<p> {{ blog_name.pub_date }}</p>
+<p> {{ blog_name.body }}</p> 
+
+<a href ="{% url 'delete' blog_name.id %}"><input type="button" value="삭제하기"></a>
+<div class ='but'>
+    <input type ="button" value="돌아가기" onclick="javascript:history.go(-1);">
+</div>
+
+<a href=""><input type="button" value="수정하기">오우오우</a>

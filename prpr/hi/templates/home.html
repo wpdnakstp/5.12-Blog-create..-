@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% for blog in blogs.all %}
+
+<h1> {{ blog.title }}</h1>
+<p> {{ blog.pub_date  }}</p>
+<p> {{ blog.summary }} <a href ="{% url 'detail' blog.id %}">...more</a></p>
+
+{% endfor %}
+
+<!-- 저 위에 for blog있자나 거기랑 url 'detail' blog.id 에 blog 이거랑
+똑같아야돼. blogs.all을 blog란 변수안에 넣겠다 했으니 endfor끝나기전에는 그 값을 가져오고 싶으면
+변수값이랑 맞춰주야되는거야. 만약에 for a in blogs.all 이면 url 'detail' a.id가 되어야겠지?? ㅇㅋ
+ -->
+<a href ="{% url 'new' %}">새로만들기</a>
+
+{% endblock %}
+
